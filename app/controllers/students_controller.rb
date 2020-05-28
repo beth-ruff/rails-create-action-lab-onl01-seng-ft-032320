@@ -12,6 +12,9 @@ class StudentsController < ApplicationController
   end
 
   def create
+    @student = Student.create(first_name: student[:first_name], last_name: student[:last_name])
+    @student.save
+    redirect_to 
   end
 
 end
